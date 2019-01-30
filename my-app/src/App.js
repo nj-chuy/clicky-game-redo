@@ -37,7 +37,7 @@ class App extends Component {
 
   beenClicked = name => {
      const thisFriend = this.state.friends.filter(friend => friend.name === name )[0]
-    if(thisFriend.clicked){
+    if(thisFriend.clicked[0]){
       alert("GAME OVER, YOU ALREADY TRIED TO EAT THAT COOKIE")
 
       // reset all clicked values to false
@@ -51,6 +51,11 @@ class App extends Component {
     }
     else{
       //change click flag 
+      this.setState({
+        clicked: true, 
+        score: + 1,
+        friends: this.shuffle(this.state.friends),
+      })
       // add a point to score
       // shuffle deck
       // score > highscore (add up on highscore)
