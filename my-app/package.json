@@ -1,6 +1,10 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "engines":{
+    "node": "10.3.0",
+    "npm": "5.7.1"
+  },
   "private": true,
   "dependencies": {
     "react": "^16.7.0",
